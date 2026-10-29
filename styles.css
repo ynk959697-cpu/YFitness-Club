@@ -3513,3 +3513,144 @@ main {
         margin: 3rem auto;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site-header {
+    width: 100%;
+    padding: 16px 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-header .logo {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.site-header .main-navigation {
+    margin-left: auto;
+    min-width: 0;
+}
+
+.site-header .main-navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: clamp(10px, 1.3vw, 22px);
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .main-navigation a {
+    white-space: nowrap;
+    font-size: clamp(13px, 1.1vw, 17px);
+}
+
+/* Desktop hero image */
+.home {
+    width: calc(100% - 64px);
+    max-width: 1450px;
+    height: 550px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.home img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Center homepage text and cards */
+.training-options,
+.about-the-club,
+.meet-our-team,
+.gallery {
+    width: calc(100% - 48px);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 14px 16px;
+    }
+
+    .home {
+        width: calc(100% - 24px);
+        height: 300px;
+    }
+
+    .home img {
+        object-fit: contain;
+        background: #111;
+    }
+
+    .training-options,
+    .about-the-club,
+    .meet-our-team,
+    .gallery {
+        width: calc(100% - 32px);
+    }
+
+    .option-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 420px;
+        gap: 24px;
+    }
+
+    .training-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .training-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-photo {
+        order: -1;
+        width: 100%;
+    }
+
+    .about-photo img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .about-text {
+        width: 100%;
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
+}
