@@ -3102,7 +3102,12 @@ img {
         margin: 0;
     }
 
- 
+.about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+}
+   
     .home img {
     display: block;
     width: 100%;
