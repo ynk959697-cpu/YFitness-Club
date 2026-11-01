@@ -3088,7 +3088,10 @@ img {
     }
 
    .option-grid {
-    grid-template-columns: 1fr;
+       grid-template-columns: 1fr;
+       width: 90%;
+       margin-left: auto;
+       margin-right: auto;
 }
 
     .training-card,
