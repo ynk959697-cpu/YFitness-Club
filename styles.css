@@ -3209,7 +3209,15 @@ footer,
     display: none;
 }
 
-/* Phone and tablet */
+.about-page-intro,
+.about-why {
+    width: auto;
+    max-width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
     .site-header {
         position: sticky;
