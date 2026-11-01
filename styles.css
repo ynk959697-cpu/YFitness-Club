@@ -3107,6 +3107,12 @@ img {
     flex-direction: column-reverse;
     gap: 2rem;
 }
+
+   .about-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
    
     .home img {
     display: block;
