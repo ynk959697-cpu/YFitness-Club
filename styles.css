@@ -3087,6 +3087,10 @@ img {
         gap: 24px;
     }
 
+   .option-grid {
+    grid-template-columns: 1fr;
+}
+
     .training-card,
     .membership-card,
     .coach-card {
