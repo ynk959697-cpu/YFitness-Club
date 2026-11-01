@@ -137,18 +137,20 @@ nav a {
    ========================== */
 
 .home {
-   position: relative;
-   width: 100%;
-   height: 550px;
-   overflow: hidden;
+    position: relative;
+    width: 94%;
+    max-width: 1500px;
+    height: 620px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .home img {
-   width: 100%;
-   height: 700px;
-   object-fit: cover;
-
-
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .home::after {
@@ -3029,7 +3031,7 @@ img {
     max-width: 100%;
 }
 
-/* Tablet */
+
 @media (max-width: 900px) {
     .training-cards,
     .membership-cards,
@@ -3041,10 +3043,10 @@ img {
     }
 }
 
-/* Phone */
+
 @media (max-width: 600px) {
 
-    /* Make the header fit the screen */
+
     header {
         width: 100%;
         height: auto;
@@ -3057,7 +3059,7 @@ img {
         min-width: 0;
     }
 
-    /* Let content containers shrink */
+
     main,
     section,
     .home,
@@ -3073,7 +3075,7 @@ img {
         max-width: 100%;
     }
 
-    /* Use one column for cards */
+
     .training-cards,
     .membership-cards,
     .coaches-grid,
@@ -3093,55 +3095,63 @@ img {
         margin: 0;
     }
 
-    /* Make hero images fill the available width */
-    .home img,
-    .about-hero img,
-    .training-hero img,
-    .memberships-hero img,
-    .schedule-hero img,
-    .coaches-hero img,
-    .contact-hero img {
-        display: block;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
+ 
+    .home img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 
-    /* Keep text away from screen edges */
-    h1 {
-        font-size: clamp(2rem, 8vw, 2.8rem);
-    }
+.about-hero img,.training-hero img,.memberships-hero img,
+.schedule-hero img,.coaches-hero img,.contact-hero img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
 
-    h2 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-    }
+.home {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+}
 
-    /* Keep form fields inside the screen */
-    input,
-    textarea,
-    select {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
 
-    /* Keep the schedule scrollable */
-    .table-wrapper,
-    .schedule-table-wrapper {
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+ h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+}
 
-    .schedule-table {
-        min-width: 700px;
-    }
+h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+}
 
-    footer,
-    .pre-footer {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+  
+input,
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+
+.table-wrapper,
+.schedule-table-wrapper {
+     max-width: 100%;
+     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.schedule-table {
+    min-width: 700px;
+}
+
+footer,
+.pre-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 }
 
 .site-header {
@@ -3150,6 +3160,8 @@ img {
     justify-content: space-between;
     gap: 24px;
     width: 100%;
+    padding: 0 32px;
+    box-sizing: border-box;
 }
 
 .site-header .logo {
